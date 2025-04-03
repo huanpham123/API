@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "demngay.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "demngay.py"
+    }
+  ]
+}
