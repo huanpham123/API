@@ -1,10 +1,9 @@
 from flask import Flask, jsonify
 from datetime import date
-import os
 
 app = Flask(__name__)
 
-@app.route('/api/days', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_days():
     start_date = date(2024, 5, 14)
     current_date = date.today()
@@ -16,5 +15,5 @@ def get_days():
         "days_elapsed": delta.days
     })
 
-if __name__ == '__main__':
-    app.run()
+# Bắt buộc phải có cho Vercel
+handler = app
