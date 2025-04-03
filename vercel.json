@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "demngay.py",
+      "src": "api/demngay.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "demngay.py"
+      "src": "/api/demngay",
+      "dest": "/api/demngay.py"
     }
   ]
 }
